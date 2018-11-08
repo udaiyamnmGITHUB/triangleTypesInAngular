@@ -1,4 +1,4 @@
-# trianleTypes
+# triangleTypesInAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3. This project is built on Angular6 to find the type of traingle with side's length of any traingle. it is tested and runs on Chrome.
 
