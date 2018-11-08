@@ -1,0 +1,36 @@
+<div class="col-md-6">
+  <h2 class="text-center">Type of Triangle</h2>
+  <form data-ts="Form" [formGroup]="triangleForm">
+    <div formGroupName="triangle">
+      <fieldset>
+        <label>
+			<span>Side 1:</span>
+			<input type="number" class="ts-right" placeholder="enter the length of side1" formControlName="sideOne" />
+		</label>
+      </fieldset>
+      <fieldset>
+        <label>
+			<span>Side 2:</span>
+			<input type="number" class="ts-right" placeholder="enter the length of side2" formControlName="sideTwo" />
+		</label>
+      </fieldset>
+      <fieldset>
+        <label>
+			<span>Side 3:</span>
+			<input type="number" class="ts-right" placeholder="enter the length of side3" formControlName="sideThree" />
+		</label>
+      </fieldset>
+    </div>
+    <button data-ts="Button" class="ts-primary" (click)="findTriangleType()">
+	    <span>Submit</span>
+    </button>
+    <dl class="ts-info" *ngIf="triangleTypeResponseObj.isValid">
+      <dt>{{triangleTypeResponseObj.displayMessage}}</dt>
+    </dl>
+    <dl class="ts-errors" *ngIf="!triangleTypeResponseObj.isValid">
+      <dt>{{triangleTypeResponseObj.displayMessage}}</dt>
+    </dl>
+  </form>
+
+
+</div>
